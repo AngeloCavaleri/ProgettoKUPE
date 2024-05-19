@@ -1,0 +1,21 @@
+Allergologia
+IND-1
+IND-2
+IND-3
+IND-4
+Pneumologia
+Dermatologia
+Oncologia
+Oculistica
+!
+Allergologia IND-3 227
+IND-1 Allergologia 150
+IND-2 IND-1 108
+IND-3 Pneumologia 114
+IND-3 Dermatologia 106
+IND-4 Oncologia 162
+Pneumologia IND-4 83
+Pneumologia IND-1 187
+Oculistica IND-2 163
+!
+hello, you'll never see me :)

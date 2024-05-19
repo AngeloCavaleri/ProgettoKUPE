@@ -4,7 +4,8 @@ function love.load()
 
 	immagine = screen.newImage("ospedale.jpeg")
 
-	width,height = 586, 586
+	width, height = immagine:getWidth(), immagine:getHeight()
+	width, height = math.min(600, width), math.min(600, height)
 
 	print = screen.print
 	circ  = screen.circle
@@ -107,6 +108,13 @@ function love.mousepressed(x,y,button,istouch,presses)
 				end
 
 				if remove then
+					for i = 1, #cons[startNode] do
+						if cons[startNode][i] == minIdx then
+							table.remove(cons[startNode], i)
+							break
+						end
+					end
+
 					for i = 1, #second do
 						if second[i] == startNode then
 							table.remove(second, i)
@@ -228,13 +236,17 @@ function Solve()
 	for i = 1, #cons do
 		n = nodes[i]
 
-		for k = 1, #cons[i] do
-			l = nodes[cons[i][k]]
+		if n.isActive then
+			for k = 1, #cons[i] do
+				l = nodes[cons[i][k]]
 
-			dx, dy = n.x - l.x, n.y - l.y
-			dist = math.floor(math.sqrt(dx ^ 2 + dy ^ 2) + .5)
+				if l.isActive then
+					dx, dy = n.x - l.x, n.y - l.y
+					dist = math.floor(math.sqrt(dx ^ 2 + dy ^ 2) + .5)
 
-			io.write(n.name .. " " .. l.name .. " " .. dist .. "\n")
+					io.write(n.name .. " " .. l.name .. " " .. dist .. "\n")
+				end
+			end
 		end
 	end
 
