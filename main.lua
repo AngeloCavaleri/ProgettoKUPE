@@ -139,6 +139,8 @@ end
 
 function love.draw()
 
+	screen.setBackgroundColor(0, 0, 0, 0)
+
 	mx, my = love.mouse.getPosition()
 
 	if love.mouse.isDown(3) then

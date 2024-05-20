@@ -117,12 +117,14 @@ json.write("{\n")
 for idx in range(len(nodes)) :
 	i = nodes[idx]
 	json.write('	"'+i.code+'" : {\n')
+	first = False
 	for kdx in range(len(imp)) :
 		k = imp[kdx]
 		if i.code!=k :
-			if kdx > 0 :
+			if first :
 				json.write(",\n")
 			json.write(f'		"{k}" : "{path(i.code, k)}"')
+			first = True
 	json.write("\n")
 	json.write('	}')
 	try :
