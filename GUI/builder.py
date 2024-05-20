@@ -12,7 +12,7 @@ class Node :
 		self.link = links
 
 		myqr = segno.make_qr(self.code)
-		myqr.save(f"Node_{self.code}.png")
+		myqr.save(f"QR/Node_{self.code}.png")
 
 temp = {}
 
