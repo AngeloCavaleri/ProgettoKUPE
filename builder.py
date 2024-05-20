@@ -12,7 +12,7 @@ class Node :
 		self.link = links
 
 		myqr = segno.make_qr(self.code)
-		myqr.save(f"Node_{self.code}.png")
+		myqr.save(f"QR/Node_{self.code}.png")
 
 temp = {}
 
@@ -115,10 +115,10 @@ json = open("nodi.json", "w")
 json.write("{\n")
 
 for i in nodes :
-	json.write("	'"+i.code+"' : {\n")
+	json.write('	"'+i.code+'" : {\n')
 	for k in imp :
 		if i.code!=k :
-			json.write(f"		'{k}' : '{path(i.code, k)}',\n")
-	json.write("	},\n")
+			json.write(f'		"{k}" : "{path(i.code, k)}",\n')
+	json.write('	},\n')
 
 json.write("}")
