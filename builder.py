@@ -114,11 +114,22 @@ json = open("nodi.json", "w")
 
 json.write("{\n")
 
-for i in nodes :
+for idx in range(len(nodes)) :
+	i = nodes[idx]
 	json.write('	"'+i.code+'" : {\n')
-	for k in imp :
+	for kdx in range(len(imp)) :
+		k = imp[kdx]
 		if i.code!=k :
-			json.write(f'		"{k}" : "{path(i.code, k)}",\n')
-	json.write('	},\n')
+			if kdx > 0 :
+				json.write(",\n")
+			json.write(f'		"{k}" : "{path(i.code, k)}"')
+	json.write("\n")
+	json.write('	}')
+	try :
+		nodes[idx + 1]
+		json.write(",")
+	except IndexError :
+		pass
+	json.write('\n')
 
 json.write("}")

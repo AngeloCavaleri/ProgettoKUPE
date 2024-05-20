@@ -4,43 +4,44 @@
 		"Oculistica" : "Oculistica",
 		"Pneumologia" : "Pneumologia",
 		"Dermatologia" : "Pneumologia",
-		"Oncologia" : "Pneumologia",
+		"Oncologia" : "Pneumologia"
 	},
 	"IND-2" : {
 		"Allergologia" : "Allergologia",
 		"Oculistica" : "Pneumologia",
 		"Pneumologia" : "Pneumologia",
 		"Dermatologia" : "Dermatologia",
-		"Oncologia" : "Pneumologia",
+		"Oncologia" : "Pneumologia"
 	},
 	"Allergologia" : {
+,
 		"Oculistica" : "IND-1",
 		"Pneumologia" : "IND-1",
 		"Dermatologia" : "IND-2",
-		"Oncologia" : "IND-1",
+		"Oncologia" : "IND-1"
 	},
 	"Oculistica" : {
 		"Allergologia" : "IND-1",
 		"Pneumologia" : "IND-1",
 		"Dermatologia" : "IND-1",
-		"Oncologia" : "IND-1",
+		"Oncologia" : "IND-1"
 	},
 	"Pneumologia" : {
 		"Allergologia" : "IND-1",
 		"Oculistica" : "IND-1",
 		"Dermatologia" : "IND-2",
-		"Oncologia" : "Oncologia",
+		"Oncologia" : "Oncologia"
 	},
 	"Dermatologia" : {
 		"Allergologia" : "IND-2",
 		"Oculistica" : "IND-2",
 		"Pneumologia" : "IND-2",
-		"Oncologia" : "IND-2",
+		"Oncologia" : "IND-2"
 	},
 	"Oncologia" : {
 		"Allergologia" : "Pneumologia",
 		"Oculistica" : "Pneumologia",
 		"Pneumologia" : "Pneumologia",
-		"Dermatologia" : "Pneumologia",
-	},
+		"Dermatologia" : "Pneumologia"
+	}
 }
