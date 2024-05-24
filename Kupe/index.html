@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/Piantina/iconGEM.png">
+    <title>Kupe</title>
+</head>
+<body id="body" class="hidden">
+    <!-- hidden -->
+    <!-- info -->
+    <!-- map -->
+    <!-- scanned -->
+    <div id="chose" class="">
+        <!-- chose -->
+        <div class="logo">
+            <img class="img-logo1" src="/Piantina/iconGEM.png" alt="Logo">
+            <img class="img-logo2" src="/Piantina/logo-kupe.png" alt="Logo">
+        </div>
+        <div class="option">
+            <button name="Allergologia" class="allergologia">Allergologia</button>
+            <button name="Dermatologia" class="dermatologia">Dermatologia</button>
+            <button name="Oculistica" class="oculistica">Oculistica</button>
+            <button name="Oncologia" class="oncologia">Oncologia</button>
+            <button name="Pneumologia" class="pneumologia">Pneumologia</button>
+            <button name="Cardiologia" class="cardiologia">Cardiologia</button>
+            <button name="Cardiochirurgia" class="cardiochirurgia">Cardiochirurgia</button>
+            <button name="Chirurgia plastica" class="chirurgia-plastica">Chirurgia plastica</button>
+            <button name="Ematologia" class="ematologia">Ematologia</button>
+            <button name="Ginecologia" class="ginecologia">Ginecologia</button>
+            <button name="Malattie infettive" class="malattie-infettive">Malattie infettive</button>
+            <button name="Nefrologia" class="nefrologia">Nefrologia</button>
+            <button name="Neurologia" class="neurologia">Neurologia</button>
+            <button name="Ortopedia" class="ortopedia">Ortopedia</button>
+            <button name="Ostetricia" class="ostetricia">Ostetricia</button>
+            <button name="Psichiatria" class="psichiatria">Psichiatria</button>
+            <button name="Radioterapia" class="radioterapia">Radioterapia</button>
+            <button name="Urologia" class="urologia">Urologia</button>
+            <button name="Servizio dietetico" class="servizio-dietetico">Servizio dietetico</button>
+            <button name="Chiesa" class="chiesa">Chiesa</button>
+
+        </div>
+    </div>
+
+    <div class="setting">
+        <div class="x-button">
+            <button class="x">X</button>
+        </div>    
+        <div class="info-map">
+            <p class="chosen-option"></p>
+            <button class="go-to-map">Vai alla mappa</button>
+            <button class="info-button">Informazioni</button>
+        </div>
+    </div>
+
+
+
+    <div class="map-box">
+        <div class="map-button">
+            <button class="return-map">Ritorna al menu</button>
+            <button class="scan" >Scansiona il successivo</button>
+        </div>
+        <div class="container">
+            <!-- Scan QR Code -->
+            <div class="section">
+                <div id="my-qr-reader">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img class="mappa" src="" alt="Mappa">
+        </div>
+        <!-- <img src="https://picsum.photos/300/300" alt="Mappa"> -->
+    </div>
+
+    <div class="info-box">
+        <button class="return-info">Ritorna alle scelte</button>
+        <p class="chosen-opzion-info"></p>
+        <p class="description">
+
+        </p>
+    </div>
+
+    <button class="return-index"></button>
+
+    <script
+        src="https://unpkg.com/html5-qrcode">
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

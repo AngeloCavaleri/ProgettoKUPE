@@ -1,0 +1,298 @@
+:root{
+    --color-1: #cdb4db;
+    --color-2: #ffc8dd;
+    --color-3: #ffafcc;
+    --color-4: white;
+    --color-5: lightgreen;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+    background: linear-gradient(var(--color-4) 10%, var(--color-5));
+    background-attachment: fixed;
+    color: black;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;  
+}
+
+main{
+    text-align: center;
+}
+
+button{
+    border: none;
+    border-radius: 16px;
+    background-color: var(--color-2);
+    padding: 10px 16px;
+    margin: 16px;
+    font-size: 16px;
+    text-align: center;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+      
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.img-logo1{
+    height: 20%;
+    width: 20%;
+    
+}
+.img-logo2{
+    height: 30%;
+    width: 30%;
+}
+
+.option button{
+    width: 155px;
+}
+
+.option button:hover,
+.go-to-map:hover,
+.info-button:hover{
+    background-color: var(--color-3);
+    cursor: pointer;
+}
+
+p{
+    color: black;
+    width: 50px;
+    height: 50px;
+}
+
+.map-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: aliceblue; */
+}
+
+.option{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.chose{
+    background-color: var(--color-4);
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+}
+
+.setting{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.x-button{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.x{
+    font-weight: bold;
+    font-size: 25px;
+    background-color: transparent;
+}
+
+
+.info-map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    opacity: 1;
+    transition: transform 2s, opacity 1s;
+}
+
+.chosen-option{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.hidden .x-button,
+.hidden .map-box,
+.hidden .info-box{
+    display: none;
+}
+
+.hidden .setting{
+    display: contents;
+}
+
+.hidden .info-map{
+    transform: translateY(80px);
+    opacity: 0;
+}
+
+.info .setting,
+.info .option,
+.info .map-box{
+    display: none;
+}
+
+.description{
+    text-align: justify;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.map .option,
+.map .setting,
+.map .info-box{
+    display: none;
+}
+
+.map-box img{
+    width: auto;
+    height: 100%;
+}
+
+.map-box{
+    display: none;
+}
+
+.map .map-box{
+    display: block;
+}
+
+.info-box{
+    display: none;
+}
+
+.info .info-box{
+    display: block;
+}
+
+.chose .option{
+    pointer-events: none;
+}
+
+.x:hover{
+    cursor: pointer;
+}
+
+.hidden .go-to-map,
+.hidden .info-button,
+.hidden .x{
+    pointer-events: none;
+}
+
+.chosen-opzion-info{
+    width: 100%;
+    font-size: 30px;
+    margin-left: 6px;
+}
+
+.map-button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.return-info,
+.return-map,
+.scan{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.return-info:hover,
+.return-map:hover{
+    background-color: var(--color-3);
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 5px;
+}
+
+.container h1 {
+    color: #ffffff;
+}
+ 
+.section {
+    display: block;
+    background-color: #ffffff;
+    padding: 50px 30px;
+    border: 1.5px solid #b2b2b2;
+    border-radius: 0.25em;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+}
+ 
+#my-qr-reader {
+    padding: 20px !important;
+    border: 1.5px solid #b2b2b2 !important;
+    border-radius: 8px;
+}
+ 
+#my-qr-reader img[alt="Info icon"] {
+    display: none;
+}
+
+#my-qr-reader img[alt="Camera based scan"] {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+#html5-qrcode-anchor-scan-type-change {
+    text-decoration: none !important;
+    color: #1d9bf0;
+}
+ 
+video {
+    width: 100% !important;
+    border: 1px solid #b2b2b2 !important;
+    border-radius: 0.25em;
+}
+
+.scanned .option,
+.scanned .setting,
+.scanned .section{
+    display: none;
+}
+
+.scanned .map-box{
+    display: block;
+}
+
+.hidden .return-index,
+.info .return-index{
+    display: none;
+}
+
+.map-map .return-map{
+    display: none;
+}
+
+.mappa{
+    display: none;
+}
+
+.scanned .mappa{
+    display: block;
+}
