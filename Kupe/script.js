@@ -34,7 +34,7 @@ const description = document.querySelector('.description');
 const returnButtonMap = document.querySelector('.return-map');
 const returnButtonScan = document.querySelector('.scan');
 const returnButtonIndex = document.querySelector('.return-index');
-const map = document.querySelector('.mappa');
+const map = document.querySelector('.map-space');
 
 const apiUrl = './visite.json';
 const nodiUrl = './nodi.json';
@@ -217,6 +217,11 @@ function info() {
   xmlhttp.send();
 }
 
+
+
+
+
+
 function domReady(fn) {
   if (
       document.readyState === "complete" ||
@@ -250,7 +255,7 @@ domReady(function () {
 
   let htmlscanner = new Html5QrcodeScanner(
       "my-qr-reader",
-      { fps: 10, qrbos: 250, rememberLastUsedCamera: false}
+      { fps: 10, qrbos: 250, rememberLastUsedCamera: false, camera2 : 0, facingMode: "environment"}
   );
   htmlscanner.render(onScanSuccess);
 
@@ -264,8 +269,9 @@ function mapImg() {
     const dataBase = JSON.parse(this.responseText);
     console.log(dataBase);
     let nodeResult = dataBase[`${prevCode}`][`${option}`];
-    let img = `/Piantina/${prevCode}-${nodeResult}`;
-    // map.src = `/Piantina/${prevCode}-${nodeResult}`;
+    let img = document.createElement('img');
+    img.src = `/Piantina/${prevCode}-${nodeResult}.png`;
+    map.appendChild(img);
     console.log(img);
   }
   xmlhttp.open("GET", nodiUrl, true);
