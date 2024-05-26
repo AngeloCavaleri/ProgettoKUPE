@@ -28,6 +28,7 @@ main{
 }
 
 button{
+    color: black;
     border: none;
     border-radius: 16px;
     background-color: var(--color-2);
@@ -281,7 +282,9 @@ video {
 }
 
 .hidden .return-index,
-.info .return-index{
+.info .return-index,
+.info .map-space,
+.hidden .map-space{
     display: none;
 }
 
@@ -289,10 +292,24 @@ video {
     display: none;
 }
 
-.mappa{
+.map-space{
     display: none;
 }
 
-.scanned .mappa{
+.scanned .map-space{
+    display: block;
+}
+
+.map-space img{
+    width: 100%;
+    height: auto;
+}
+
+.return-index{
+    display: none;
+}
+
+.map .return-index,
+.scanned .return-index{
     display: block;
 }
